@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satnam Singh | Data & Business Analyst</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        darkBg: '#0F172A',
+                        darkCard: '#1E293B'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-xl font-bold tracking-tight text-primary">Satnam Singh</span>
+                <div class="flex items-center space-x-6">
+                    <a href="#about" class="hover:text-primary transition">About</a>
+                    <a href="#projects" class="hover:text-primary transition">Projects</a>
+                    <a href="#skills" class="hover:text-primary transition">Skills</a>
+                    <a href="#experience" class="hover:text-primary transition">Experience</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                    <!-- Dark/Light Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none">
+                        <i id="theme-toggle-dark-icon" class="fas font-moon hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fas font-sun hidden"></i>
+                        <span id="theme-icon-container"><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-2/3">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
+                Hi, I'm <span class="text-primary">Satnam Singh</span>
+            </h1>
+            <h2 class="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-6">
+                Economics Graduate & Aspiring Data / Business Analyst
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                Currently pursuing a Master of Arts in Economics at Massey University in Auckland. Specialized in data interpretation, quantitative reasoning, relational databases (PostgreSQL), and operational analytics.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#contact" class="px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition shadow-lg">Get In Touch</a>
+                <a href="https://github.com/Satnam-Singh-Analyst" target="_blank" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="https://linkedin.com/in/satnam-singh-3b124a230" target="_blank" class="px-6 py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+        <!-- Profile Avatar Placeholder -->
+        <div class="mt-10 md:mt-0 flex justify-center">
+            <div class="w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-white text-5xl font-bold shadow-2xl">
+                SS
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100 dark:bg-darkCard/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-darkCard rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">NZ Enterprise Retail & Logistics Engine</h3>
+                        <p class="text-sm text-primary mb-4 font-semibold">PostgreSQL | pgAdmin 4</p>
+                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 text-sm mb-6">
+                            <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST.</li>
+                            <li>Wrote a fraud-velocity query using <code>LAG()</code> and <code>EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows.</li>
+                            <li>Calculated 7-day rolling revenue using <code>ROWS BETWEEN</code> and split customer spend quartiles with <code>NTILE</code> and <code>DENSE_RANK</code>.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/Satnam-Singh-Analyst/nz-enterprise-retail-engine" target="_blank" class="inline-flex items-center text-primary font-medium hover:underline">
+                        View Code Repository <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-darkCard rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Consumer Market Analysis – Tata Motors</h3>
+                        <p class="text-sm text-primary mb-4 font-semibold">Survey Methodology | MS Excel | Data Tabulation</p>
+                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 text-sm mb-6">
+                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands.</li>
+                            <li>Processed results across 18 analytical tables using frequency and percentage analysis.</li>
+                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations.</li>
+                        </ul>
+                    </div>
+                    <span class="text-gray-400 text-sm italic">Academic Project (Chandigarh University)</span>
+                </div>
+
+                <!-- Dashboard Placeholder (Future Additions) -->
+                <div class="md:col-span-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl p-8 text-center border border-dashed border-gray-300 dark:border-gray-700">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-3"></i>
+                    <h3 class="text-xl font-bold mb-2">Power BI & Interactive Dashboards Coming Soon</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xl mx-auto">
+                        Currently developing interactive business intelligence dashboards focused on NZ retail analytics and financial trend modeling.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Technical & Analytical Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-database text-3xl text-primary mb-3"></i>
+                <h3 class="font-bold text-lg mb-2">Databases & SQL</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">PostgreSQL, MySQL, CTEs, Window Functions, Joins, Aggregations, Subqueries</p>
+            </div>
+            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-chart-pie text-3xl text-primary mb-3"></i>
+                <h3 class="font-bold text-lg mb-2">Data & Analytics</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Exploratory Data Analysis, KPI Tracking, Customer Segmentation, Revenue Modeling</p>
+            </div>
+            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+                <h3 class="font-bold text-lg mb-2">Reporting & Tools</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Power BI (Developing), MS Excel (Pivot Tables, Formulas), Python (Developing), CRM Systems</p>
+            </div>
+            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-graduation-cap text-3xl text-primary mb-3"></i>
+                <h3 class="font-bold text-lg mb-2">Economics & Methods</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Econometrics, Quantitative Policy Analysis, Research Methodology, Statistics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="py-16 bg-gray-100 dark:bg-darkCard/50">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Work Experience -->
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-briefcase text-primary mr-3"></i> Work History
+                </h2>
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Apr 2026 – Jun 2026</span>
+                        <h3 class="font-bold text-lg">Operations Customer Expert 1</h3>
+                        <p class="text-sm text-gray-500">Teleperformance Global Business Services (Apple India)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Analyzed ticket logs daily to identify operational bottlenecks and brought new starters up to speed on CRM workflows.</p>
+                    </div>
+                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Aug 2024 – Apr 2026</span>
+                        <h3 class="font-bold text-lg">Customer Care Executive</h3>
+                        <p class="text-sm text-gray-500">Teleperformance Global Business Services (Apple India)</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Handled 40-50 daily contacts, tracking customer issue categories, payments, and warranties cleanly within CRM system logs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-university text-primary mr-3"></i> Education
+                </h2>
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Feb 2027 – Jul 2028</span>
+                        <h3 class="font-bold text-lg">Master of Arts – Economics</h3>
+                        <p class="text-sm text-gray-500">Massey University, Auckland, New Zealand</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">NZQF Level 9 Research Pathway focusing on Econometrics, Economic Research, and Policy Analysis.</p>
+                    </div>
+                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Graduated Jun 2024</span>
+                        <h3 class="font-bold text-lg">Bachelor of Arts – Economics</h3>
+                        <p class="text-sm text-gray-500">Chandigarh University, Punjab, India</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">CGPA: 7.56/10 (NZQF Level 7 Equivalent). Focused on Statistics, Quantitative Methods, and Econometrics.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mb-8">
+            Looking for Data Analyst or Business Analyst opportunities in Auckland, NZ.
+        </p>
+
+        <!-- Formspree Integration Form -->
+        <form action="https://formspree.io/f/singhsatnam0803@gmail.com" method="POST" class="bg-white dark:bg-darkCard p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Your Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1">Your Email</label>
+                    <input type="email" name="_replyto" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-1">Subject</label>
+                <input type="text" name="subject" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-1">Message</label>
+                <textarea name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition shadow-md">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+        <p>© 2026 Satnam Singh. Built for Data & Business Analytics.</p>
+    </footer>
+
+    <!-- Dark Theme Toggle Logic -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // Check initial system / localStorage preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
