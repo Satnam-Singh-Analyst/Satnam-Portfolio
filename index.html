@@ -13,8 +13,10 @@
                 extend: {
                     colors: {
                         primary: '#3B82F6',
-                        darkBg: '#0F172A',
-                        darkCard: '#1E293B'
+                        accent: '#6366F1',
+                        darkBg: '#0B0F19',
+                        darkCard: '#1E293B',
+                        darkCardBorder: '#334155'
                     }
                 }
             }
@@ -22,23 +24,39 @@
     </script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Animations -->
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.3);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 35px 0px rgba(59, 130, 246, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300 font-sans">
+<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-blue-500 selection:text-white">
 
     <!-- Header / Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav class="fixed w-full top-0 z-50 bg-white/70 dark:bg-darkBg/70 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 transition-all">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <span class="text-xl font-bold tracking-tight text-primary">Satnam Singh</span>
-                <div class="flex items-center space-x-6">
-                    <a href="#about" class="hover:text-primary transition">About</a>
-                    <a href="#projects" class="hover:text-primary transition">Projects</a>
-                    <a href="#skills" class="hover:text-primary transition">Skills</a>
-                    <a href="#experience" class="hover:text-primary transition">Experience</a>
-                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                <a href="#about" class="text-xl font-extrabold tracking-tight gradient-text hover:opacity-80 transition">
+                    Satnam Singh
+                </a>
+                <div class="flex items-center space-x-4 sm:space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
                     <!-- Dark/Light Theme Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none">
-                        <span id="theme-icon-container"><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <button id="theme-toggle" class="p-2 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:scale-105 active:scale-95 transition-all focus:outline-none">
+                        <span id="theme-icon-container"><i class="fa-solid fa-moon"></i></span>
                     </button>
                 </div>
             </div>
@@ -46,77 +64,101 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-2/3">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
-                Hi, I'm <span class="text-primary">Satnam Singh</span>
+    <section id="about" class="pt-36 pb-24 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div class="md:w-2/3 text-center md:text-left">
+            <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-wider text-primary bg-blue-50 dark:bg-blue-950/60 rounded-full border border-blue-200 dark:border-blue-800/50">
+                Auckland, New Zealand
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-4 leading-tight">
+                Hi, I'm <span class="gradient-text">Satnam Singh</span>
             </h1>
-            <h2 class="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-6">
+            <h2 class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 font-medium mb-6">
                 Economics Graduate & Aspiring Data / Business Analyst
             </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl leading-relaxed">
                 Currently pursuing a Master of Arts in Economics at Massey University in Auckland. Specialized in data interpretation, quantitative reasoning, relational databases (PostgreSQL), and operational analytics.
             </p>
             <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                <a href="#contact" class="px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition shadow-lg">Get In Touch</a>
-                <a href="https://github.com/Satnam-Singh-Analyst" target="_blank" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition">
+                <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all">
+                    Get In Touch
+                </a>
+                <a href="https://github.com/Satnam-Singh-Analyst" target="_blank" class="px-6 py-3 bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 font-medium rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 hover:-translate-y-0.5 transition-all shadow-sm">
                     <i class="fab fa-github mr-2"></i>GitHub
                 </a>
-                <a href="https://linkedin.com/in/satnam-singh-3b124a230" target="_blank" class="px-6 py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition">
+                <a href="https://linkedin.com/in/satnam-singh-3b124a230" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition-all shadow-sm">
                     <i class="fab fa-linkedin mr-2"></i>LinkedIn
                 </a>
             </div>
         </div>
-        <!-- Profile Picture Image Container -->
-        <div class="mt-10 md:mt-0 flex justify-center">
-            <div class="w-56 h-56 rounded-full bg-slate-800 p-2 shadow-2xl border-2 border-slate-700 flex items-center justify-center overflow-hidden">
-                <img src="profile.png" alt="Satnam Singh" class="w-full h-full rounded-full object-cover">
+        
+        <!-- Profile Picture Image Container with Glow & Gradient Ring -->
+        <div class="flex justify-center">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                <div class="relative w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-slate-900 p-1.5 ring-1 ring-slate-900/10 overflow-hidden">
+                    <img src="profile.png" alt="Satnam Singh" class="w-full h-full rounded-full object-cover">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-100 dark:bg-darkCard/50">
+    <section id="projects" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Project 1 -->
-                <div class="bg-white dark:bg-darkCard rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
-                        <h3 class="text-xl font-bold mb-2">NZ Enterprise Retail & Logistics Engine</h3>
-                        <p class="text-sm text-primary mb-4 font-semibold">PostgreSQL | pgAdmin 4</p>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 text-sm mb-6">
-                            <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST[cite: 1].</li>
-                            <li>Wrote a fraud-velocity query using <code>LAG()</code> and <code>EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows[cite: 1].</li>
-                            <li>Calculated 7-day rolling revenue using <code>ROWS BETWEEN</code> and split customer spend quartiles with <code>NTILE</code> and <code>DENSE_RANK</code>[cite: 1].</li>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition-colors">NZ Enterprise Retail & Logistics Engine</h3>
+                            <span class="text-xs px-2.5 py-1 bg-blue-50 dark:bg-blue-950/80 text-primary font-semibold rounded-md border border-blue-100 dark:border-blue-900">PostgreSQL</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Relational Architecture & Advanced SQL</p>
+                        <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
+                            <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST.</li>
+                            <li>Wrote a fraud-velocity query using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">LAG()</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows.</li>
+                            <li>Calculated 7-day rolling revenue using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">ROWS BETWEEN</code> and split customer spend quartiles with <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">NTILE</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">DENSE_RANK</code>.</li>
                         </ul>
                     </div>
-                    <a href="https://github.com/Satnam-Singh-Analyst/nz-enterprise-retail-engine" target="_blank" class="inline-flex items-center text-primary font-medium hover:underline">
-                        View Code Repository <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    <a href="https://github.com/Satnam-Singh-Analyst/nz-enterprise-retail-engine" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
+                        View Code Repository <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white dark:bg-darkCard rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
-                        <h3 class="text-xl font-bold mb-2">Consumer Market Analysis – Tata Motors</h3>
-                        <p class="text-sm text-primary mb-4 font-semibold">Survey Methodology | MS Excel | Data Tabulation</p>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 text-sm mb-6">
-                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands[cite: 1].</li>
-                            <li>Processed results across 18 analytical tables using frequency and percentage analysis[cite: 1].</li>
-                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations[cite: 1].</li>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition-colors">Consumer Market Analysis – Tata Motors</h3>
+                            <span class="text-xs px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 font-semibold rounded-md border border-indigo-100 dark:border-indigo-900">Analytics</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Survey Methodology & Excel Data Tabulation</p>
+                        <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
+                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands.</li>
+                            <li>Processed results across 18 analytical tables using frequency and percentage analysis.</li>
+                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations.</li>
                         </ul>
                     </div>
-                    <span class="text-gray-400 text-sm italic">Academic Project (Chandigarh University)</span>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400 italic">
+                        <span>Academic Research Project</span>
+                        <span>Chandigarh University</span>
+                    </div>
                 </div>
 
                 <!-- Dashboard Placeholder -->
-                <div class="md:col-span-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl p-8 text-center border border-dashed border-gray-300 dark:border-gray-700">
-                    <i class="fas fa-chart-line text-4xl text-primary mb-3"></i>
+                <div class="md:col-span-2 bg-gradient-to-r from-blue-900/10 via-indigo-900/10 to-purple-900/10 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-purple-900/20 rounded-2xl p-8 text-center border border-dashed border-blue-300 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-950 rounded-xl flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Power BI & Interactive Dashboards Coming Soon</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xl mx-auto">
-                        Currently developing interactive business intelligence dashboards focused on NZ retail analytics and financial trend modeling[cite: 1].
+                    <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto">
+                        Currently developing interactive business intelligence dashboards focused on NZ retail analytics, supply chain metrics, and financial trend modeling.
                     </p>
                 </div>
 
@@ -125,74 +167,91 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Technical & Analytical Skills</h2>
+    <section id="skills" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Technical & Analytical Skills</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                <i class="fas fa-database text-3xl text-primary mb-3"></i>
+            <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
+                <div class="w-12 h-12 bg-blue-50 dark:bg-blue-950 rounded-xl flex items-center justify-center mb-4 text-primary text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-database"></i>
+                </div>
                 <h3 class="font-bold text-lg mb-2">Databases & SQL</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">PostgreSQL, MySQL, CTEs, Window Functions, Joins, Aggregations, Subqueries[cite: 1]</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PostgreSQL, MySQL, CTEs, Window Functions, Joins, Aggregations, Subqueries</p>
             </div>
-            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                <i class="fas fa-chart-pie text-3xl text-primary mb-3"></i>
+
+            <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
+                <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-950 rounded-xl flex items-center justify-center mb-4 text-indigo-600 dark:text-indigo-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
                 <h3 class="font-bold text-lg mb-2">Data & Analytics</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Exploratory Data Analysis, KPI Tracking, Customer Segmentation, Revenue Modeling[cite: 1]</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Exploratory Data Analysis, KPI Tracking, Customer Segmentation, Revenue Modeling</p>
             </div>
-            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+
+            <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
+                <div class="w-12 h-12 bg-purple-50 dark:bg-purple-950 rounded-xl flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
                 <h3 class="font-bold text-lg mb-2">Reporting & Tools</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Power BI (Developing), MS Excel (Pivot Tables, Formulas), Python (Developing), CRM Systems[cite: 1]</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Power BI (Developing), MS Excel (Pivot Tables, Formulas), Python (Developing), CRM Systems</p>
             </div>
-            <div class="p-5 bg-white dark:bg-darkCard rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                <i class="fas fa-graduation-cap text-3xl text-primary mb-3"></i>
+
+            <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
+                <div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-950 rounded-xl flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
                 <h3 class="font-bold text-lg mb-2">Economics & Methods</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Econometrics, Quantitative Policy Analysis, Research Methodology, Statistics[cite: 1]</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Econometrics, Quantitative Policy Analysis, Research Methodology, Statistics</p>
             </div>
         </div>
     </section>
 
     <!-- Experience & Education -->
-    <section id="experience" class="py-16 bg-gray-100 dark:bg-darkCard/50">
+    <section id="experience" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
             
             <!-- Work Experience -->
             <div>
-                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <h2 class="text-2xl font-bold mb-8 flex items-center">
                     <i class="fas fa-briefcase text-primary mr-3"></i> Work History
                 </h2>
                 <div class="space-y-6">
-                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-primary">
                         <span class="text-xs text-primary font-bold uppercase tracking-wider">Apr 2026 – Jun 2026</span>
-                        <h3 class="font-bold text-lg">Operations Customer Expert 1</h3>
-                        <p class="text-sm text-gray-500">Teleperformance Global Business Services (Apple India)[cite: 1]</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Analyzed ticket logs daily to identify operational bottlenecks and brought new starters up to speed on CRM workflows[cite: 1].</p>
+                        <h3 class="font-bold text-lg mt-1">Operations Customer Expert 1</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Analyzed ticket logs daily to identify operational bottlenecks and brought new starters up to speed on CRM workflows.</p>
                     </div>
-                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Aug 2024 – Apr 2026</span>
-                        <h3 class="font-bold text-lg">Customer Care Executive</h3>
-                        <p class="text-sm text-gray-500">Teleperformance Global Business Services (Apple India)[cite: 1]</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Handled 40-50 daily contacts, tracking customer issue categories, payments, and warranties cleanly within CRM system logs[cite: 1].</p>
+
+                    <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-slate-400 dark:border-l-slate-600">
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Aug 2024 – Apr 2026</span>
+                        <h3 class="font-bold text-lg mt-1">Customer Care Executive</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Handled 40-50 daily contacts, tracking customer issue categories, payments, and warranties cleanly within CRM system logs.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Education -->
             <div>
-                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <h2 class="text-2xl font-bold mb-8 flex items-center">
                     <i class="fas fa-university text-primary mr-3"></i> Education
                 </h2>
                 <div class="space-y-6">
-                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Feb 2027 – Jul 2028</span>
-                        <h3 class="font-bold text-lg">Master of Arts – Economics</h3>
-                        <p class="text-sm text-gray-500">Massey University, Auckland, New Zealand[cite: 1]</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">NZQF Level 9 Research Pathway focusing on Econometrics, Economic Research, and Policy Analysis[cite: 1].</p>
+                    <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-indigo-600">
+                        <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Feb 2027 – Jul 2028</span>
+                        <h3 class="font-bold text-lg mt-1">Master of Arts – Economics</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Massey University, Auckland, New Zealand</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">NZQF Level 9 Research Pathway focusing on Econometrics, Economic Research, and Policy Analysis.</p>
                     </div>
-                    <div class="bg-white dark:bg-darkCard p-5 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Graduated Jun 2024</span>
-                        <h3 class="font-bold text-lg">Bachelor of Arts – Economics</h3>
-                        <p class="text-sm text-gray-500">Chandigarh University, Punjab, India[cite: 1]</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">CGPA: 7.56/10 (NZQF Level 7 Equivalent). Focused on Statistics, Quantitative Methods, and Econometrics[cite: 1].</p>
+
+                    <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-slate-400 dark:border-l-slate-600">
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Graduated Jun 2024</span>
+                        <h3 class="font-bold text-lg mt-1">Bachelor of Arts – Economics</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Chandigarh University, Punjab, India</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">CGPA: 7.56/10 (NZQF Level 7 Equivalent). Focused on Statistics, Quantitative Methods, and Econometrics.</p>
                     </div>
                 </div>
             </div>
@@ -201,61 +260,68 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
-        <p class="text-center text-gray-600 dark:text-gray-400 mb-8">
-            Looking for Data Analyst or Business Analyst opportunities in Auckland, NZ[cite: 1].
-        </p>
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get In Touch</h2>
+            <p class="text-slate-600 dark:text-slate-400 mt-3 max-w-lg mx-auto">
+                Open to Data Analyst & Business Analyst opportunities across Auckland, New Zealand.
+            </p>
+        </div>
 
-        <!-- Updated Formspree Endpoint Form -->
-        <form action="https://formspree.io/f/xkjnyywk" method="POST" class="bg-white dark:bg-darkCard p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Formspree Contact Form -->
+        <form action="https://formspree.io/f/xkjnyywk" method="POST" class="bg-white dark:bg-darkCard p-8 sm:p-10 rounded-2xl shadow-md border border-slate-200/80 dark:border-slate-800 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                    <label class="block text-sm font-medium mb-1">Your Name</label>
-                    <input type="text" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+                    <label class="block text-sm font-semibold mb-2">Your Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none transition-all">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium mb-1">Your Email</label>
-                    <input type="email" name="_replyto" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+                    <label class="block text-sm font-semibold mb-2">Your Email</label>
+                    <input type="email" name="_replyto" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none transition-all">
                 </div>
             </div>
             <div>
-                <label class="block text-sm font-medium mb-1">Subject</label>
-                <input type="text" name="subject" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none">
+                <label class="block text-sm font-semibold mb-2">Subject</label>
+                <input type="text" name="subject" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none transition-all">
             </div>
             <div>
-                <label class="block text-sm font-medium mb-1">Message</label>
-                <textarea name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+                <label class="block text-sm font-semibold mb-2">Message</label>
+                <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none transition-all"></textarea>
             </div>
-            <button type="submit" class="w-full py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition shadow-md">
+            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 active:translate-y-0 transition-all">
                 Send Message
             </button>
         </form>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
         <p>© 2026 Satnam Singh. Built for Data & Business Analytics.</p>
     </footer>
 
     <!-- Dark Theme Toggle Script -->
     <script>
         const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIconContainer = document.getElementById('theme-icon-container');
+
+        function updateIcon(isDark) {
+            themeIconContainer.innerHTML = isDark 
+                ? '<i class="fa-solid fa-sun text-yellow-400"></i>' 
+                : '<i class="fa-solid fa-moon text-slate-700"></i>';
+        }
 
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
+            updateIcon(true);
         } else {
             document.documentElement.classList.remove('dark');
+            updateIcon(false);
         }
 
         themeToggleBtn.addEventListener('click', function() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+            updateIcon(isDark);
         });
     </script>
 </body>
