@@ -76,7 +76,7 @@
                 Economics Graduate & Aspiring Data / Business Analyst
             </h2>
             <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl leading-relaxed">
-                Currently pursuing a Master of Arts in Economics at Massey University in Auckland. Specialized in data interpretation, quantitative reasoning, relational databases (PostgreSQL), and operational analytics.
+                Currently pursuing a Master of Arts in Economics at Massey University in Auckland. Specialized in data interpretation, quantitative reasoning, relational databases (PostgreSQL/SQL), and operational analytics.
             </p>
             <div class="flex flex-wrap gap-4 justify-center md:justify-start">
                 <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all">
@@ -112,7 +112,26 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1 -->
+                <!-- Project 1: SQL Sales Analysis (NEWLY ADDED) -->
+                <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition-colors">SQL Retail Sales & Customer Behavior Analysis</h3>
+                            <span class="text-xs px-2.5 py-1 bg-blue-50 dark:bg-blue-950/80 text-primary font-semibold rounded-md border border-blue-100 dark:border-blue-900">SQL / MySQL</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Exploratory Data Analysis & Customer Intelligence</p>
+                        <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
+                            <li>Designed and cleaned a relational sales dataset to track order transactions, customer demographics, and product revenue trends.</li>
+                            <li>Executed advanced SQL queries utilizing aggregate functions, GROUP BY, and multi-table JOINs to perform KPI analysis and identify top-performing product categories.</li>
+                            <li>Segmented customer purchasing behaviors across order frequencies and revenue tiers to uncover actionable insights for retargeting campaigns.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/Satnam-Singh-Analyst/sql-sales-analysis-project" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
+                        View Code Repository <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2: NZ Enterprise Engine -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
@@ -121,9 +140,9 @@
                         </div>
                         <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Relational Architecture & Advanced SQL</p>
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
-                            <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST.</li>
-                            <li>Wrote a fraud-velocity query using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">LAG()</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows.</li>
-                            <li>Calculated 7-day rolling revenue using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">ROWS BETWEEN</code> and split customer spend quartiles with <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">NTILE</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">DENSE_RANK</code>.</li>
+                            <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST[cite: 1].</li>
+                            <li>Wrote a fraud-velocity query using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">LAG()</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows[cite: 1].</li>
+                            <li>Calculated 7-day rolling revenue using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">ROWS BETWEEN</code> and split customer spend quartiles with <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">NTILE</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">DENSE_RANK</code>[cite: 1].</li>
                         </ul>
                     </div>
                     <a href="https://github.com/Satnam-Singh-Analyst/nz-enterprise-retail-engine" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -131,7 +150,7 @@
                     </a>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 3: Tata Motors Market Analysis -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
@@ -140,25 +159,25 @@
                         </div>
                         <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Survey Methodology & Excel Data Tabulation</p>
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
-                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands.</li>
-                            <li>Processed results across 18 analytical tables using frequency and percentage analysis.</li>
-                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations.</li>
+                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands[cite: 1].</li>
+                            <li>Processed results across 18 analytical tables using frequency and percentage analysis[cite: 1].</li>
+                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations[cite: 1].</li>
                         </ul>
                     </div>
                     <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400 italic">
                         <span>Academic Research Project</span>
-                        <span>Chandigarh University</span>
+                        <span>Chandigarh University[cite: 1]</span>
                     </div>
                 </div>
 
                 <!-- Dashboard Placeholder -->
-                <div class="md:col-span-2 bg-gradient-to-r from-blue-900/10 via-indigo-900/10 to-purple-900/10 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-purple-900/20 rounded-2xl p-8 text-center border border-dashed border-blue-300 dark:border-slate-700">
+                <div class="bg-gradient-to-r from-blue-900/10 via-indigo-900/10 to-purple-900/10 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-purple-900/20 rounded-2xl p-8 text-center border border-dashed border-blue-300 dark:border-slate-700 flex flex-col justify-center items-center">
                     <div class="w-12 h-12 bg-blue-100 dark:bg-blue-950 rounded-xl flex items-center justify-center mx-auto mb-4 text-primary text-xl">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Power BI & Interactive Dashboards Coming Soon</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto">
-                        Currently developing interactive business intelligence dashboards focused on NZ retail analytics, supply chain metrics, and financial trend modeling.
+                        Currently developing interactive business intelligence dashboards focused on NZ retail analytics, supply chain metrics, and financial trend modeling[cite: 1].
                     </p>
                 </div>
 
@@ -179,7 +198,7 @@
                     <i class="fas fa-database"></i>
                 </div>
                 <h3 class="font-bold text-lg mb-2">Databases & SQL</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PostgreSQL, MySQL, CTEs, Window Functions, Joins, Aggregations, Subqueries</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PostgreSQL, MySQL, CTEs, Window Functions, Joins, Aggregations, Subqueries[cite: 1]</p>
             </div>
 
             <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
@@ -187,7 +206,7 @@
                     <i class="fas fa-chart-pie"></i>
                 </div>
                 <h3 class="font-bold text-lg mb-2">Data & Analytics</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Exploratory Data Analysis, KPI Tracking, Customer Segmentation, Revenue Modeling</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Exploratory Data Analysis, KPI Tracking, Customer Segmentation, Revenue Modeling[cite: 1]</p>
             </div>
 
             <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
@@ -195,7 +214,7 @@
                     <i class="fas fa-laptop-code"></i>
                 </div>
                 <h3 class="font-bold text-lg mb-2">Reporting & Tools</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Power BI (Developing), MS Excel (Pivot Tables, Formulas), Python (Developing), CRM Systems</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Power BI (Developing), MS Excel (Pivot Tables, Formulas), Python (Developing), CRM Systems[cite: 1]</p>
             </div>
 
             <div class="p-6 bg-white dark:bg-darkCard rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-md transition-all group">
@@ -203,7 +222,7 @@
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <h3 class="font-bold text-lg mb-2">Economics & Methods</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Econometrics, Quantitative Policy Analysis, Research Methodology, Statistics</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Econometrics, Quantitative Policy Analysis, Research Methodology, Statistics[cite: 1]</p>
             </div>
         </div>
     </section>
@@ -219,17 +238,17 @@
                 </h2>
                 <div class="space-y-6">
                     <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-primary">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Apr 2026 – Jun 2026</span>
-                        <h3 class="font-bold text-lg mt-1">Operations Customer Expert 1</h3>
-                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)</p>
-                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Analyzed ticket logs daily to identify operational bottlenecks and brought new starters up to speed on CRM workflows.</p>
+                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Apr 2026 – Jun 2026[cite: 1]</span>
+                        <h3 class="font-bold text-lg mt-1">Operations Customer Expert 1[cite: 1]</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)[cite: 1]</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Analyzed ticket logs daily to identify operational bottlenecks and brought new starters up to speed on CRM workflows[cite: 1].</p>
                     </div>
 
                     <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-slate-400 dark:border-l-slate-600">
-                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Aug 2024 – Apr 2026</span>
-                        <h3 class="font-bold text-lg mt-1">Customer Care Executive</h3>
-                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)</p>
-                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Handled 40-50 daily contacts, tracking customer issue categories, payments, and warranties cleanly within CRM system logs.</p>
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Aug 2024 – Apr 2026[cite: 1]</span>
+                        <h3 class="font-bold text-lg mt-1">Customer Care Executive[cite: 1]</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Teleperformance Global Business Services (Apple India)[cite: 1]</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">Handled 40-50 daily contacts, tracking customer issue categories, payments, and warranties cleanly within CRM system logs[cite: 1].</p>
                     </div>
                 </div>
             </div>
@@ -241,17 +260,17 @@
                 </h2>
                 <div class="space-y-6">
                     <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-indigo-600">
-                        <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Feb 2027 – Jul 2028</span>
-                        <h3 class="font-bold text-lg mt-1">Master of Arts – Economics</h3>
-                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Massey University, Auckland, New Zealand</p>
-                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">NZQF Level 9 Research Pathway focusing on Econometrics, Economic Research, and Policy Analysis.</p>
+                        <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Feb 2027 – Jul 2028[cite: 1]</span>
+                        <h3 class="font-bold text-lg mt-1">Master of Arts – Economics[cite: 1]</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Massey University, Auckland, New Zealand[cite: 1]</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">NZQF Level 9 Research Pathway focusing on Econometrics, Economic Research, and Policy Analysis[cite: 1].</p>
                     </div>
 
                     <div class="bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm relative pl-6 border-l-4 border-l-slate-400 dark:border-l-slate-600">
-                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Graduated Jun 2024</span>
-                        <h3 class="font-bold text-lg mt-1">Bachelor of Arts – Economics</h3>
-                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Chandigarh University, Punjab, India</p>
-                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">CGPA: 7.56/10 (NZQF Level 7 Equivalent). Focused on Statistics, Quantitative Methods, and Econometrics.</p>
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Graduated Jun 2024[cite: 1]</span>
+                        <h3 class="font-bold text-lg mt-1">Bachelor of Arts – Economics[cite: 1]</h3>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Chandigarh University, Punjab, India[cite: 1]</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">CGPA: 7.56/10 (NZQF Level 7 Equivalent). Focused on Statistics, Quantitative Methods, and Econometrics[cite: 1].</p>
                     </div>
                 </div>
             </div>
@@ -264,7 +283,7 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get In Touch</h2>
             <p class="text-slate-600 dark:text-slate-400 mt-3 max-w-lg mx-auto">
-                Open to Data Analyst & Business Analyst opportunities across Auckland, New Zealand.
+                Open to Data Analyst & Business Analyst opportunities across Auckland, New Zealand[cite: 1].
             </p>
         </div>
 
