@@ -108,11 +108,12 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
                 <div class="w-16 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm max-w-xl mx-auto">Explore my data analysis, relational architecture, and predictive modeling portfolios hosted on GitHub.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1: Real Estate Price Intelligence & Dashboard -->
+                <!-- Project 1: Real Estate Price Intelligence -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
@@ -123,7 +124,7 @@
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
                             <li>Developed an interactive Streamlit analytics platform to perform real-time housing valuation and market risk assessment.</li>
                             <li>Engineered an automated data cleaning pipeline using Pandas to handle missing values, duplicates, and feature scaling.</li>
-                            <li>Implemented OLS multiple linear regression math with dynamic dynamic confidence bounds (MAE) and age-based depreciation profiling.</li>
+                            <li>Implemented OLS multiple linear regression models with dynamic confidence bounds (MAE) and age-based depreciation profiling.</li>
                         </ul>
                     </div>
                     <a href="https://github.com/Satnam-Singh-Analyst/house-price-analytics" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -131,7 +132,7 @@
                     </a>
                 </div>
 
-                <!-- Project 2: NZ Enterprise Engine -->
+                <!-- Project 2: NZ Enterprise Retail Engine -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
@@ -141,8 +142,8 @@
                         <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Relational Architecture & Advanced SQL</p>
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
                             <li>Built a 3NF PostgreSQL schema across 5 tables covering regions, customers, products, and orders incorporating EFTPOS and NZ's 15% GST.</li>
-                            <li>Wrote a fraud-velocity query using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">LAG()</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows.</li>
-                            <li>Calculated 7-day rolling revenue using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">ROWS BETWEEN</code> and split customer spend quartiles with <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">NTILE</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">DENSE_RANK</code>.</li>
+                            <li>Wrote fraud-velocity checks using <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">LAG()</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">EXTRACT EPOCH</code> to flag multi-order spikes within 5-minute windows.</li>
+                            <li>Calculated 7-day rolling revenue using window functions and segmented customer tiers with <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">NTILE</code> and <code class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-blue-600 dark:text-blue-400 font-mono text-xs">DENSE_RANK</code>.</li>
                         </ul>
                     </div>
                     <a href="https://github.com/Satnam-Singh-Analyst/nz-enterprise-retail-engine" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -150,7 +151,7 @@
                     </a>
                 </div>
 
-                <!-- Project 3: SQL Sales Analysis -->
+                <!-- Project 3: SQL Retail Sales Analysis -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
@@ -160,8 +161,8 @@
                         <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Exploratory Data Analysis & Customer Intelligence</p>
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
                             <li>Designed and cleaned a relational sales dataset to track order transactions, customer demographics, and product revenue trends.</li>
-                            <li>Executed advanced SQL queries utilizing aggregate functions, GROUP BY, and multi-table JOINs to perform KPI analysis and identify top-performing product categories.</li>
-                            <li>Segmented customer purchasing behaviors across order frequencies and revenue tiers to uncover actionable insights for retargeting campaigns.</li>
+                            <li>Executed advanced SQL queries utilizing aggregate functions, GROUP BY, and multi-table JOINs to perform KPI performance tracking.</li>
+                            <li>Segmented customer purchasing behaviors across order frequencies and revenue tiers to uncover actionable insights for targeting.</li>
                         </ul>
                     </div>
                     <a href="https://github.com/Satnam-Singh-Analyst/sql-sales-analysis-project" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
@@ -169,24 +170,23 @@
                     </a>
                 </div>
 
-                <!-- Project 4: Tata Motors Market Analysis -->
+                <!-- Project 4: Python Data Cleaning & NumPy/Pandas Toolkit -->
                 <div class="bg-white dark:bg-darkCard rounded-2xl p-7 shadow-sm hover:shadow-xl dark:border dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group">
                     <div>
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold group-hover:text-primary transition-colors">Consumer Market Analysis – Tata Motors</h3>
-                            <span class="text-xs px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 font-semibold rounded-md border border-indigo-100 dark:border-indigo-900">Analytics</span>
+                            <h3 class="text-xl font-bold group-hover:text-primary transition-colors">Python Data Manipulation & Analytics Toolkit</h3>
+                            <span class="text-xs px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 font-semibold rounded-md border border-indigo-100 dark:border-indigo-900">Python / Pandas</span>
                         </div>
-                        <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Survey Methodology & Excel Data Tabulation</p>
+                        <p class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Data Transformation & Exploratory Scripts</p>
                         <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2.5 text-sm mb-6 leading-relaxed">
-                            <li>Surveyed 50 respondents in Firozpur to map brand awareness, purchase drivers, and expectations across competing vehicle brands.</li>
-                            <li>Processed results across 18 analytical tables using frequency and percentage analysis.</li>
-                            <li>Visualized market insights and key purchase trends to inform executive summary recommendations.</li>
+                            <li>Built comprehensive Python data wrangling scripts leveraging Pandas methods (<code class="px-1 py-0.5 bg-slate-100 dark:bg-slate-800 rounded font-mono text-xs">.drop_duplicates()</code>, <code class="px-1 py-0.5 bg-slate-100 dark:bg-slate-800 rounded font-mono text-xs">.astype()</code>, <code class="px-1 py-0.5 bg-slate-100 dark:bg-slate-800 rounded font-mono text-xs">.str.replace()</code>).</li>
+                            <li>Applied NumPy array operations and broadcasting for high-performance numerical computations and summary statistics.</li>
+                            <li>Constructed automated data visualization routines using Seaborn (<code class="px-1 py-0.5 bg-slate-100 dark:bg-slate-800 rounded font-mono text-xs">sns.heatmap</code>, <code class="px-1 py-0.5 bg-slate-100 dark:bg-slate-800 rounded font-mono text-xs">sns.boxenplot</code>) and Matplotlib.</li>
                         </ul>
                     </div>
-                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400 italic">
-                        <span>Academic Research Project</span>
-                        <span>Chandigarh University</span>
-                    </div>
+                    <a href="https://github.com/Satnam-Singh-Analyst" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800">
+                        View GitHub Profile <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
 
             </div>
